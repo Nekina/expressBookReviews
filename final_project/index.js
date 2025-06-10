@@ -11,7 +11,17 @@ app.use(express.json());
 app.use("/customer",session({secret:"fingerprint_customer",resave: true, saveUninitialized: true}))
 
 app.use("/customer/auth/*", function auth(req,res,next){
-//Write the authenication mechanism here
+//Write the authentication mechanism here
+    const token = req.session.jwt;
+    if (!token) {
+        return res.status(404).json({message: "Login required"});
+    }
+    jwt.verify(token, "aVerySecretKey", (err, decoded) => {
+        if (err) {
+            return res.status(404).json({message: "Session expired. Please login again."});
+        }
+        next();
+    });
 });
  
 const PORT =5000;
