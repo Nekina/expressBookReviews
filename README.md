@@ -40,5 +40,3 @@ A RESTful API built with Node.js and Express.js that enables users to manage boo
 6. (Optional) Run the server without live reload
    ```bash
    npm start
-   git clone https://github.com/Nekina/expressBookReviews.git
-   cd expressBookReviews
