@@ -17,7 +17,7 @@ A RESTful API built with Node.js and Express.js that enables users to manage boo
 - **Node.js** – JavaScript runtime environment  
 - **Express.js** – Web framework for building RESTful APIs  
 - **JWT & express-session** – User authentication and session management  
-- **Axios** – For making HTTP requests  
+- **Axios** – For simulating asynchronous HTTP requests to exposed books endpoint  
 - **Nodemon** – Tool for live-reloading during development  
 - **Postman / cURL** – API testing tools  
 - **JavaScript (ES6+)** – Language features including async/await  
